@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailArticleActivity">
+
+    <ImageView
+        android:id="@+id/iv_photoUrl"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:contentDescription="@string/post_picture"
+        android:src="@drawable/article_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/upcomingSessions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/imgGoAllUpcomingSessions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="Detail Article"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/upcomingSessions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toEndOf="@+id/upcomingSessions"
+        app:layout_constraintTop_toTopOf="@+id/upcomingSessions"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:src="@drawable/sementara_detail_article"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Awet Muda &amp; Tips Kebugaran"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/tv_storyCreatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_userName"
+        tools:text="15 Mei 2023" />
+
+    <TextView
+        android:id="@+id/tv_storyDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:text="Kebugaran jasmani adalah kemampuan manusia dalam menjalani aktivitas sehari-hari tanpa mengalami kelelahan yang berarti. Dalam sebuah riset yang terbit di Encyclopedia of Behavioral Medicine (2013), peneliti menyebutkan kebugaran sebagai kemampuan untuk beraktivitas dengan kinerja, ketahanan, dan kekuatan tubuh yang optimal1. Kebugaran jasmani dapat dicapai melalui latihan fisik teratur. Latihan kebugaran jasmani dapat membantu meningkatkan kekuatan otot, daya tahan kardiovaskular, fleksibilitas, dan keseimbangan. Selain itu, latihan kebugaran jasmani juga dapat membantu mengurangi risiko penyakit kronis seperti obesitas, diabetes tipe 2, dan penyakit jantung12.Latihan kebugaran jasmani dapat dilakukan dengan berbagai bentuk seperti lari, bersepeda, berenang, atau senam aerobik. Untuk memperoleh hasil yang optimal, latihan kebugaran jasmani harus dilakukan secara rutin dan teratur"
+        android:textAlignment="textStart"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_storyCreatedAt"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">Fitnessist</string>
+    <string name="camera_x">CameraX</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="upload">Unggah</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="donthaveaccount">Don\'t have account?</string>
+    <string name="daftar">Register</string>
+    <string name="greeting2">We are happy to see you again</string>
+    <string name="greeting1">Welcome back!</string>
+
+    <string name="title_menu_1">Aplikasi Cerita No.1 Di Indonesia</string>
+    <string name="title_menu_2">Ekspresikan Keluh Kesah-Mu</string>
+    <string name="title_menu_3">Anda Juga Dapat Memberikan Pesan Terkait Pembelajaran</string>
+    <string name="title_menu_4">Mendekatkan Yang Jauh</string>
+    <string name="desc_menu_1">Ceritakan momen yang anda lalui hari ini kepada 1 juta pengguna yang tersebar di seluruh Indonesia.</string>
+    <string name="desc_menu_2">Tidak baik untuk memendam apa yang kamu rasakan, silahkan tumpahkan perasaan anda pada story yang anda buat.</string>
+    <string name="desc_menu_3">Dengan begitu anda dapat berbagi ilmu kepada sesama pengguna.</string>
+    <string name="desc_menu_4">Dengan membaca curhatan pengguna dapat mengisi waktu luang-mu.</string>
+    <string name="learn_now">Coba Sekarang</string>
+    <string name="data_kosong">Data Tidak Ditemukan</string>
+    <string name="confirm_password">Konfirmasi Kata Sandi</string>
+    <string name="register">Daftar</string>
+
+    <string name="empty_name">Nama Tidak Boleh Kosong!</string>
+    <string name="empty_email">Email Tidak Boleh Kosong!</string>
+    <string name="empty_password">Kata Sandi Tidak Boleh Kosong!</string>
+    <string name="empty_passconf">Kata Sandi Konfirmasi Tidak Boleh Kosong!</string>
+
+    <string name="invalid_email">Format Email Salah!</string>
+    <string name="invalid_password">Password harus lebih dari 8 karakter!</string>
+    <string name="description">Deskripsi</string>
+    <string name="profile">Profile</string>
+    <string name="log_out">Log Out</string>
+    <string name="already_have_an_account">Already have account?</string>
+    <string name="name">Nama</string>
+    <string name="create_account_to_continue">Buat akun untuk melanjutkan</string>
+    <string name="welcome">Selamat Datang!</string>
+    <string name="passconf">Confirm Password</string>
+    <string name="success_register">Pendaftaran berhasil</string>
+    <string name="email_have_been_registered">Email sudah pernah digunakan!</string>
+    <string name="server_error">Server sedang gangguan, coba lagi setelah beberapa saat!</string>
+    <string name="check_input">Periksa lagi inputan anda!</string>
+    <string name="password_passconf_is_same">Kata sandi konfirmasi harus sama dengan kata sandi!</string>
+    <string name="success_login">Login Berhasil</string>
+    <string name="email_password_not_found">Email atau password tidak ditemukan!</string>
+    <string name="empty_description">Deskripsi Kosong</string>
+    <string name="Permisson_denied">Tidak mendapatkan permission.</string>
+    <string name="choose_a_picture">Choose a Picture</string>
+    <string name="input_image_first">Silakan masukkan berkas gambar terlebih dahulu.</string>
+    <string name="please_input_description">Masukkan Deskripsi</string>
+    <string name="take_picture">Ambil Gambar</string>
+    <string name="change_camera">Mengubah arah kamera</string>
+    <string name="post_picture">Gambar postingan</string>
+    <string name="discuss_with_friend">Gambar bercerita seharian diperapian bersama teman</string>
+    <string name="discuss_with_friend_2">Gambar berdiskusi bersama teman</string>
+    <string name="learn_something">Gambar orang sedang mempelajari sesuatu</string>
+    <string name="indonesia_map">Gambar peta Indonesia</string>
+    <string name="profile_picture">Gambar fitur profile picture yang akan dirilis pada update selanjutnya</string>
+    <string name="dicoding_picture_logo">Gambar Logo Dicoding</string>
+    <string name="preview_picture">Preview dari gambar yang anda inputkan</string>
+    <string name="article_post_picture">Gambar postingan article</string>
+    <string name="connect_exception">Gagal terhubung dengan server. Mohon periksa koneksi internet anda</string>
+    <string name="socket_timeout_exception">Terjadi timeout ketika mencoba menghubungkan ke server. Mohon coba setelah beberapa saat.</string>
+    <string name="io_exception">Gagal untuk mendapatkan stories</string>
+    <string name="else_error_message">Gagal untuk mendapatkan stories. Mohon coba setelah beberapa saat.</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="map">Map</string>
+    <string name="load_maps_failed">Gagal me-load maps, coba lagi setelah beberapa saat!</string>
+    <string name="failed_load_story">Gagal menampilkan data</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_artikel">ArtikelActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="home">Home</string>
+    <string name="workout">Workout</string>
+    <string name="store">Store</string>
+    <string name="username">Username</string>
+    <string name="greeting3">Welcome! 👋</string>
+    <string name="greeting4">Let\'s create your account</string>
+    <string name="hello_bang_messi">Hello, Bang Messi</string>
+    <string name="detail">Detail</string>
+    <string name="onboarding_title">Get Fit,\nGet Strong, \nGet Healthy!</string>
+
+    <!-- Artikel -->
+    <string-array name="data_name">
+        <item>Iphone 14 Pro</item>
+        <item>ROG Phone 6 Pro</item>
+        <item>Samsung S22 Ultra</item>
+        <item>Xiaomi 13 Pro</item>
+        <item>Oppo Reno 8T</item>
+        <item>Vivo X80 Pro</item>
+        <item>Huawei P50 Pro</item>
+        <item>Oneplus 9 Pro</item>
+        <item>Infinix Zero X</item>
+        <item>Samsung Galaxy Z Fold</item>
+        <item>Ipad Pro Gen 5</item>
+        <item>Samsung Galaxy Z Flip</item>
+        <item>OPPO Find N2 Flip</item>
+        <item>Motorola Razr</item>
+        <item>Xiaomi Mi Fold</item>
+    </string-array>
+
+    <string-array name="data_specification">
+        <item>IPhone adalah merek ponsel cerdas yang dirancang dan dipasarkan oleh Apple Inc. dan menggunakan sistem operasi telepon genggam iOS. iPhone generasi pertama diumumkan oleh CEO Apple Steve Jobs pada tanggal 9 Januari 2007. Sejak saat itu, Apple merilis model iPhone baru dan pembaruan iOS setiap tahun.</item>
+        <item>ROG Phone adalah ponsel gaming terkuat yang menggunakan Platform Mobile Qualcomm® Snapdragon ™ terbaru dengan kemampuan komunikasi seluler yang canggih.</item>
+        <item>Seri Samsung Galaxy S adalah jajaran perangkat seluler Android kelas atas yang diproduksi oleh Samsung Electronics. Seri ini awalnya terdiri dari ponsel-ponsel cerdas dan perangkat pertama, Samsung Galaxy S, diumumkan pada Maret 2010 dan dirilis untuk dijual pada Juni tahun itu. Samsung kemudian memperluas lini Galaxy S ke komputer tablet dengan pengumuman Galaxy Tab S pada Juni 2014 dan dirilis pada bulan berikutnya.</item>
+        <item>Xiaomi 13 Pro merupakan smartphone flagship yang hadir sebagai versi tangguh dari Xiaomi 13.</item>
+        <item>Oppo Reno adalah series smartphone besutan brand Oppo yang dilengkapi oleh sejuta fitur menarik. Series Reno dari Oppo berhasil memikat publik melalui spesifikasi, desain, sekaligus fitur yang sangat lengkap di dalamnya. Yang mana tipe gadget dalam seri Reno pun beragam.</item>
+        <item>vivo X Series menjadi salah satu smartphone premium yang bersaing di pasar Indonesia, dengan membawa spesifikasi yang tinggi di kelasnya, serta dibekali dengan fitur-fitur yang mengusung teknologi terkini.</item>
+        <item>Seri Huawei P (sebelumnya seri Ascend P) adalah jajaran smartphone Android kelas atas dan menengah yang diproduksi oleh Huawei. Seri P sebelumnya dipasarkan sebagai bagian dari merek Ascend Huawei yang lebih besar. Beberapa model disebut P smart.</item>
+        <item>OnePlus adalah merk smartphone asal Shenzhen, China, yang terkenal dengan produk smartphone berspesifikasi mumpuni, desain menarik, software terkini, tetapi harga jualnya cukup terjangkau. Bahkan merk ini disebut-sebut sebagai brand flagship killer.</item>
+        <item>Infinix Zero X keluaran tahun berapa? Infinix Zero X Neo resmi hadir di pasar Indonesia sejak akhir tahun 2021 dengan spesifikasi handal dan harga terjangkau.</item>
+        <item>Samsung Galaxy Z Fold adalah ponsel cerdas lipat berbasis Android yang dikembangkan oleh Samsung Electronics.</item>
+        <item>iPad merupakan tablet dari Apple yang tidak hanya bermanfaat untuk menunjang pekerjaan, tetapi juga bisa digunakan sebagai media hiburan dan hobi. Seri Pro merupakan varian tertinggal yang ditawarkan oleh Apple pada segmen Ipad-nya.</item>
+        <item>Samsung Z Flip merupakan produk yang dibekali dengan bahan ultra thin glass pada layar utama dan stacked think film material untuk memudahkan ponsel agar layar lebih fleksibel saat dilipat berulang kali.</item>
+        <item>HP Oppo Find N adalah produk yang dikembangkan selama empat tahun terakhir oleh OPPO dan akhirnya dikenalkan lewat acara tahunan OPPO INNO Day 2021.</item>
+        <item>Meet razr the pocket-ready flip phone fused with the intelligence of a modern smartphone. Fully foldable, dual displays.</item>
+        <item>Xiaomi Mi Fold merupakan smartphone lipat keluaran xiaomi dengan layar OLED.</item>
+    </string-array>
+</resources>

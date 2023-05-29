@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.UserCaloriesActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="64dp">
+        <ImageView
+            android:id="@+id/upcomingSessions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/imgGoAllUpcomingSessions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:textAlignment="center"
+            android:text="Kalori Harian"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/upcomingSessions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.422"
+            app:layout_constraintStart_toEndOf="@+id/upcomingSessions"
+            app:layout_constraintTop_toTopOf="@+id/upcomingSessions"
+            app:layout_constraintVertical_bias="1.0" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sementara_calendar"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/title_kalori_harian"
+        android:layout_marginHorizontal="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kalori Harian"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:id="@+id/kebutuhan_kalori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2.200"
+            android:textSize="18dp"
+            android:layout_marginStart="13dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/kalori_makanan"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="500"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/kalori_akhir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1700"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:id="@+id/title_firstCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kebutuhan"
+            android:textSize="16dp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/title_LatihanCalories"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Makanan"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/total_firstCalories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sisa"
+            android:textSize="16dp"
+            android:textAlignment="textEnd"
+            android:layout_marginEnd="4dp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/primary100"
+            android:text="Scan Makanan"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jumlah" />
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/primary100"
+            android:text="Tambah Makanan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jumlah" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/imgGoAllUpcomingSessionss"
+        android:layout_marginHorizontal="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Riwayat"
+        android:textSize="20dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvUpcomingSessionss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
+
+</LinearLayout>
