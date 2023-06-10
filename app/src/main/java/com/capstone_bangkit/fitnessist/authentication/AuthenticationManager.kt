@@ -35,5 +35,6 @@ class AuthenticationManager(context: Context) {
         const val TOKEN = "token"
         const val EMAIL = "email"
         const val NAME = "name"
+        const val USERNAME = "username"
     }
 }

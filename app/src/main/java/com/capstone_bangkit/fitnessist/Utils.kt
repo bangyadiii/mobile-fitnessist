@@ -1,4 +1,4 @@
-package com.capstone_bangkit.fitnessist.camera
+package com.capstone_bangkit.fitnessist
 
 import android.app.Application
 import android.content.ContentResolver

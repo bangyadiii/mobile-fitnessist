@@ -11,4 +11,13 @@
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />
 
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/primary100"
+        android:text="@string/log_out"
+        android:layout_marginHorizontal="16dp"/>
+
 </FrameLayout>

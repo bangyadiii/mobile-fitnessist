@@ -5,13 +5,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.capstone_bangkit.fitnessist.api.ApiConfig
-import com.capstone_bangkit.fitnessist.api.ArticleResponse
 import com.capstone_bangkit.fitnessist.model.Article
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class SearchArticleViewModel: ViewModel() {
+    /*
     val listArticle = MutableLiveData<ArrayList<Article>>()
 
     fun setSearchArticle(query: String) {
@@ -35,4 +35,5 @@ class SearchArticleViewModel: ViewModel() {
     fun getSearchArticle(): LiveData<ArrayList<Article>> {
         return listArticle
     }
+     */
 }

@@ -13,7 +13,7 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
-import com.capstone_bangkit.fitnessist.camera.createFile
+import com.capstone_bangkit.fitnessist.createFile
 import com.capstone_bangkit.fitnessist.databinding.ActivityCameraBinding
 
 class CameraScanActivity : AppCompatActivity() {

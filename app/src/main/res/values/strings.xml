@@ -41,10 +41,10 @@
     <string name="welcome">Selamat Datang!</string>
     <string name="passconf">Confirm Password</string>
     <string name="success_register">Pendaftaran berhasil</string>
-    <string name="email_have_been_registered">Email sudah pernah digunakan!</string>
+    <string name="email_have_been_registered">Email atau Username sudah pernah digunakan!</string>
     <string name="server_error">Server sedang gangguan, coba lagi setelah beberapa saat!</string>
     <string name="check_input">Periksa lagi inputan anda!</string>
-    <string name="password_passconf_is_same">Kata sandi konfirmasi harus sama dengan kata sandi!</string>
+    <string name="password_passconf_must_same">Kata sandi konfirmasi harus sama dengan kata sandi!</string>
     <string name="success_login">Login Berhasil</string>
     <string name="email_password_not_found">Email atau password tidak ditemukan!</string>
     <string name="empty_description">Deskripsi Kosong</string>
@@ -88,6 +88,7 @@
     <string name="hello_bang_messi">Hello, Bang Messi</string>
     <string name="detail">Detail</string>
     <string name="onboarding_title">Get Fit,\nGet Strong, \nGet Healthy!</string>
+    <string name="empty_username">username tidak boleh kosong!</string>
 
     <!-- Artikel -->
     <string-array name="data_name">
