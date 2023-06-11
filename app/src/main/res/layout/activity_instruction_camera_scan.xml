@@ -11,10 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="64dp"
-        android:layout_marginBottom="32dp">
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="24dp">
         <ImageView
-            android:id="@+id/upcomingSessions"
+            android:id="@+id/back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Scan Makanan"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:text="Instruksi"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginHorizontal="16dp"/>
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:text="Pastikan kamera dapat dengan jelas melihat objek, posisikan makanan sesuai dengan gambar dibawah."
-        android:textSize="16dp"
+        android:textSize="16sp"
         android:textColor="@color/black"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="8dp" />
@@ -61,10 +61,12 @@
         android:src="@drawable/food_scan_instruction" />
 
     <Button
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/btn_scanFood"
+        android:layout_width="135dp"
+        android:layout_height="55dp"
         android:layout_gravity="center"
         android:backgroundTint="@color/primary100"
+        android:fontFamily="@font/montserrat_semibold"
         android:text="Tambahkan"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"

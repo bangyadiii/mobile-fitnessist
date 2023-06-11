@@ -20,8 +20,8 @@
                 android:id="@+id/linear_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
                 android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -39,7 +39,7 @@
                     android:id="@+id/img_search"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginEnd="20dp"
+                    android:layout_marginEnd="32dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/notification" />
             </LinearLayout>
@@ -48,7 +48,7 @@
                 android:id="@+id/tv_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
                 android:text="Start living a healthy life from now on"
                 android:textColor="@color/black"
@@ -56,29 +56,94 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linear_header" />
 
-            <Button
+            <androidx.cardview.widget.CardView
                 android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="Goals \nUnderweight \n \n70% about your progress"
-                android:gravity="left"
-                android:textColor="@color/black"
-                android:backgroundTint="@color/white"
-                android:background="@drawable/border"
+                android:layout_width="380dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="20dp"
                 android:layout_marginHorizontal="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_2" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_2">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginEnd="230dp">
+                            <TextView
+                                android:id="@+id/tv_metodePembayaran"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="Goals"
+                                android:textSize="12sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/opensans_semibold"
+                                android:textColor="@color/gray"
+                                android:text="Underweight"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="17dp"
+                            android:layout_height="17dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="10dp"
+                            android:rotation="180"
+                            android:src="@drawable/arrow_back" />
+                    </LinearLayout>
+                    <ProgressBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:progressTint="@color/secondary_100"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progress="70" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:textColor="@color/gray"
+                            android:text="70%"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_semibold"
+                            android:textColor="@color/gray"
+                            android:text=" about your progress"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/upcomingSessions"
+                android:id="@+id/tv_myWorkout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
-                android:text="Your Workout"
+                android:text="My Workout"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
@@ -86,32 +151,32 @@
                 app:layout_constraintTop_toBottomOf="@+id/button2" />
 
             <TextView
-                android:id="@+id/imgGoAllUpcomingSessions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/detail"
                 android:layout_marginStart="4dp"
+                android:text="@string/detail"
                 android:textColor="@color/birumuda"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/upcomingSessions"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_myWorkout"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.961"
-                app:layout_constraintStart_toEndOf="@+id/upcomingSessions"
-                app:layout_constraintTop_toTopOf="@+id/upcomingSessions" />
+                app:layout_constraintHorizontal_bias="0.939"
+                app:layout_constraintStart_toEndOf="@+id/tv_myWorkout"
+                app:layout_constraintTop_toTopOf="@+id/tv_myWorkout"
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
-                android:id="@+id/rvUpcomingSessions"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/iv_myWorkOut"
+                android:layout_width="375dp"
+                android:layout_height="170dp"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="8dp"
                 android:src="@drawable/sementara_home"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/upcomingSessions" />
+                app:layout_constraintTop_toBottomOf="@id/tv_myWorkout" />
 
             <TextView
-                android:id="@+id/upcomingSessionss"
+                android:id="@+id/tv_articleTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -121,30 +186,36 @@
                 android:textStyle="bold"
                 android:layout_marginTop="24dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rvUpcomingSessions" />
+                app:layout_constraintTop_toBottomOf="@+id/iv_myWorkOut" />
 
             <TextView
-                android:id="@+id/imgGoAllUpcomingSessionss"
+                android:id="@+id/tv_viewAll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="View All"
                 android:layout_marginStart="4dp"
+                android:text="View All"
                 android:textColor="@color/birumuda"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/upcomingSessionss"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_articleTitle"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.961"
-                app:layout_constraintStart_toEndOf="@+id/upcomingSessionss"
-                app:layout_constraintTop_toTopOf="@+id/upcomingSessionss" />
+                app:layout_constraintHorizontal_bias="0.945"
+                app:layout_constraintStart_toEndOf="@+id/tv_articleTitle"
+                app:layout_constraintTop_toTopOf="@+id/tv_articleTitle"
+                app:layout_constraintVertical_bias="1.0" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvUpcomingSessionss"
+                android:id="@+id/rv_article"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/upcomingSessionss" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_articleTitle"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

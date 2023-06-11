@@ -12,5 +12,9 @@ class AddFoodActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAddFoodBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.back.setOnClickListener {
+            onBackPressed()
+        }
     }
 }

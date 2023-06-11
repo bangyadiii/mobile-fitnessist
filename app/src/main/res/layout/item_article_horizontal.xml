@@ -21,7 +21,7 @@
             android:layout_gravity="center">
 
             <ImageView
-                android:id="@+id/img_storiesThumbnail"
+                android:id="@+id/img_articleThumbnail"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:contentDescription="@string/article_post_picture"
@@ -43,17 +43,18 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/tv_storiesTitle"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_articleTitle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:ellipsize="end"
                     android:maxWidth="150dp"
                     android:maxLines="1"
-                    android:textAlignment="textStart"
                     android:text="Title"
-                    android:ellipsize="end"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/gray_800"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="@color/gray_800"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,7 +62,7 @@
 
             <TextView
                 android:id="@+id/tv_storiesDescription"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="67dp"
                 android:layout_marginTop="8dp"
                 tools:text="@tools:sample/lorem/random"
@@ -85,13 +86,13 @@
                     android:textColor="@color/gray_800"
                     android:textSize="15sp"
                     android:textStyle="bold"
-                    tools:text="4.4k views" />
+                    android:text="4.4k views" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:src="@drawable/like" />
+                    android:src="@drawable/baseline_favorite" />
 
             </LinearLayout>
 

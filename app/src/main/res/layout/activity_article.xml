@@ -6,41 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".ui.ArticleActivity" >
 
-    <ImageView
-        android:id="@+id/upcomingSessions"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
-        android:src="@drawable/arrow_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.capstone_bangkit.fitnessist.customview.NormalEditText
-        android:id="@+id/imgGoAllUpcomingSessions"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/edit_text"
-        android:hint="Cari Judul"
-        android:maxLines="1"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/upcomingSessions"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/upcomingSessions"
-        app:layout_constraintTop_toTopOf="@+id/upcomingSessions"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/arrow_back" />
+        <com.capstone_bangkit.fitnessist.customview.NormalEditText
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/edit_text"
+            android:hint="Cari Judul"
+            android:maxLines="1"
+            android:padding="10dp" />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/baseline_favorite" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvUpcomingSessionss"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:id="@+id/rv_article"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgGoAllUpcomingSessions" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

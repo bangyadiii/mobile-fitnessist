@@ -25,5 +25,10 @@
         android:name="com.capstone_bangkit.fitnessist.ui.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/userCaloriesFragment"
+        android:name="com.capstone_bangkit.fitnessist.ui.UserCaloriesFragment"
+        android:label="fragment_userCalories"
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>

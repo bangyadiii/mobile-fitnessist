@@ -1,97 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.DetailArticleActivity">
 
-    <ImageView
-        android:id="@+id/iv_photoUrl"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:contentDescription="@string/post_picture"
-        android:src="@drawable/article_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/upcomingSessions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
-        android:src="@drawable/arrow_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/post_picture"
+            android:scaleType="fitXY"
+            android:src="@drawable/article_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/imgGoAllUpcomingSessions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:text="Detail Article"
-        android:textSize="20dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/upcomingSessions"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
-        app:layout_constraintStart_toEndOf="@+id/upcomingSessions"
-        app:layout_constraintTop_toTopOf="@+id/upcomingSessions"
-        app:layout_constraintVertical_bias="1.0" />
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
-        android:src="@drawable/sementara_detail_article"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_title_detailArticle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Detail Article"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.422"
+            app:layout_constraintStart_toEndOf="@+id/iv_back"
+            app:layout_constraintTop_toTopOf="@+id/iv_back"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/tv_userName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Awet Muda &amp; Tips Kebugaran"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iv_cardView"
+            android:layout_width="323dp"
+            android:layout_height="169dp"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_detailArticle">
+            <ImageView
+                android:id="@+id/iv_photoUrl"
+                android:layout_width="323dp"
+                android:layout_height="169dp"
+                android:src="@drawable/sementara_detail_article" />
+        </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/tv_storyCreatedAt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="8dp"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_userName"
-        tools:text="15 Mei 2023" />
+        <TextView
+            android:id="@+id/tv_articleTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Awet Muda &amp; Tips Kebugaran"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cardView" />
 
-    <TextView
-        android:id="@+id/tv_storyDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginVertical="8dp"
-        android:text="Kebugaran jasmani adalah kemampuan manusia dalam menjalani aktivitas sehari-hari tanpa mengalami kelelahan yang berarti. Dalam sebuah riset yang terbit di Encyclopedia of Behavioral Medicine (2013), peneliti menyebutkan kebugaran sebagai kemampuan untuk beraktivitas dengan kinerja, ketahanan, dan kekuatan tubuh yang optimal1. Kebugaran jasmani dapat dicapai melalui latihan fisik teratur. Latihan kebugaran jasmani dapat membantu meningkatkan kekuatan otot, daya tahan kardiovaskular, fleksibilitas, dan keseimbangan. Selain itu, latihan kebugaran jasmani juga dapat membantu mengurangi risiko penyakit kronis seperti obesitas, diabetes tipe 2, dan penyakit jantung12.Latihan kebugaran jasmani dapat dilakukan dengan berbagai bentuk seperti lari, bersepeda, berenang, atau senam aerobik. Untuk memperoleh hasil yang optimal, latihan kebugaran jasmani harus dilakukan secara rutin dan teratur"
-        android:textAlignment="textStart"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_storyCreatedAt"
-        app:layout_constraintVertical_bias="0.0" />
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_articleTitle">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/outline_remove_red_eye"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"/>
+
+            <TextView
+                android:id="@+id/tv_storyCreatedAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:textSize="15sp"
+                android:text="4.4k views" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/baseline_favorite"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_storyDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:text="Kebugaran jasmani adalah kemampuan manusia dalam menjalani aktivitas sehari-hari tanpa mengalami kelelahan yang berarti. Dalam sebuah riset yang terbit di Encyclopedia of Behavioral Medicine (2013), peneliti menyebutkan kebugaran sebagai kemampuan untuk beraktivitas dengan kinerja, ketahanan, dan kekuatan tubuh yang optimal1. Kebugaran jasmani dapat dicapai melalui latihan fisik teratur. Latihan kebugaran jasmani dapat membantu meningkatkan kekuatan otot, daya tahan kardiovaskular, fleksibilitas, dan keseimbangan. Selain itu, latihan kebugaran jasmani juga dapat membantu mengurangi risiko penyakit kronis seperti obesitas, diabetes tipe 2, dan penyakit jantung12.Latihan kebugaran jasmani dapat dilakukan dengan berbagai bentuk seperti lari, bersepeda, berenang, atau senam aerobik. Untuk memperoleh hasil yang optimal, latihan kebugaran jasmani harus dilakukan secara rutin dan teratur"
+            android:textAlignment="textStart"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

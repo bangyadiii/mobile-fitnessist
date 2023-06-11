@@ -10,7 +10,7 @@
     <string name="donthaveaccount">Don\'t have account?</string>
     <string name="daftar">Register</string>
     <string name="greeting2">We are happy to see you again</string>
-    <string name="greeting1">Welcome back!</string>
+    <string name="greeting1">Welcome back! 👋</string>
 
     <string name="title_menu_1">Aplikasi Cerita No.1 Di Indonesia</string>
     <string name="title_menu_2">Ekspresikan Keluh Kesah-Mu</string>
@@ -23,7 +23,7 @@
     <string name="learn_now">Coba Sekarang</string>
     <string name="data_kosong">Data Tidak Ditemukan</string>
     <string name="confirm_password">Konfirmasi Kata Sandi</string>
-    <string name="register">Daftar</string>
+    <string name="register">Register</string>
 
     <string name="empty_name">Nama Tidak Boleh Kosong!</string>
     <string name="empty_email">Email Tidak Boleh Kosong!</string>
@@ -89,6 +89,16 @@
     <string name="detail">Detail</string>
     <string name="onboarding_title">Get Fit,\nGet Strong, \nGet Healthy!</string>
     <string name="empty_username">username tidak boleh kosong!</string>
+    <string name="onboarding_desc_1">Welcome to your personal \nfitness assistant</string>
+    <string name="onboarding_desc_2">Our program is designed to help you achieve \nyour fitness goals, transform your body and \n mind.</string>
+    <string name="greeting_4">Welcome!</string>
+    <string name="exercise_goals_desc">Explore. Your choice. Adaptation \nCourage. Progress.</string>
+    <string name="exercise_goals_selection_1">Mengurangi Berat Badan</string>
+    <string name="exercise_goals_selection_2">Menambah Berat Badan</string>
+    <string name="exercise_goals_selection_3">Jaga Masa Otot</string>
+    <string name="user_body_Data">Input Your Data</string>
+    <string name="back">Kembali</string>
+    <string name="food">Food</string>
 
     <!-- Artikel -->
     <string-array name="data_name">

@@ -10,6 +10,10 @@
         android:icon="@drawable/workoutnav"
         android:title="@string/workout"/>
     <item
+        android:id="@+id/userCaloriesFragment"
+        android:icon="@drawable/foodnav"
+        android:title="@string/food"/>
+    <item
         android:id="@+id/storeFragment"
         android:icon="@drawable/storenav"
         android:title="@string/store"/>
