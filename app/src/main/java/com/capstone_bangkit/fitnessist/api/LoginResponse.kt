@@ -1,9 +1,9 @@
 package com.capstone_bangkit.fitnessist.api
 
-import com.capstone_bangkit.fitnessist.model.User
+import com.capstone_bangkit.fitnessist.model.UserToken
 import com.google.gson.annotations.SerializedName
 
 class LoginResponse (
     @SerializedName("data")
-    val data: User
+    val data: UserToken
 )

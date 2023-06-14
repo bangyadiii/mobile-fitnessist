@@ -46,33 +46,22 @@
             android:name=".ui.InstructionCameraScanActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.UserCaloriesActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.DetailArticleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.ArticleActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.UploadActivity"
-            android:exported="false" />
-        <activity
-            android:name=".camera.UploadActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.CameraScanActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.ArtikelActivity"
-            android:exported="false"
-            android:label="@string/title_activity_artikel"
-            android:theme="@style/Theme.Fitnessist" />
         <activity
             android:name=".ui.RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".ui.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.UploadActivity"
             android:exported="false" />
         <activity
             android:name=".ui.SplashScreenActivity"

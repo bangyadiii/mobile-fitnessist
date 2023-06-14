@@ -6,15 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.capstone_bangkit.fitnessist.R
+import com.capstone_bangkit.fitnessist.authentication.AuthenticationManager
 import com.capstone_bangkit.fitnessist.databinding.FragmentUserCaloriesBinding
 
 class UserCaloriesFragment : Fragment() {
+    private lateinit var authentication: AuthenticationManager
     private lateinit var binding: FragmentUserCaloriesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        authentication = AuthenticationManager(requireContext())
     }
 
     override fun onCreateView(
@@ -30,6 +32,8 @@ class UserCaloriesFragment : Fragment() {
             val addFood = Intent(context, AddFoodActivity::class.java)
             startActivity(addFood)
         }
+        val getCalories = authentication.getAccessInt(AuthenticationManager.CALORIES_EACH_DAY_TARGET).toString()
+        binding.kebutuhanKalori.text = getCalories
         return binding.root
     }
 }

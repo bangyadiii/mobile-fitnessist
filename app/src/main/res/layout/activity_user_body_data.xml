@@ -59,6 +59,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/edt_age"
                 android:layout_width="140dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="20dp"
@@ -67,6 +68,7 @@
                 android:padding="12dp" />
 
             <EditText
+                android:id="@+id/edt_gender"
                 android:layout_width="140dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/edit_text"
@@ -107,6 +109,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/edt_weight"
                 android:layout_width="140dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="20dp"
@@ -115,6 +118,7 @@
                 android:padding="12dp" />
 
             <EditText
+                android:id="@+id/edt_weightTarget"
                 android:layout_width="140dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/edit_text"
@@ -155,6 +159,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/edt_height"
                 android:layout_width="140dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="20dp"
@@ -163,6 +168,7 @@
                 android:padding="12dp" />
 
             <EditText
+                android:id="@+id/edt_fat"
                 android:layout_width="140dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/edit_text"
@@ -180,6 +186,7 @@
             android:textSize="16sp" />
 
         <EditText
+            android:id="@+id/edt_activity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/edit_text"
@@ -187,6 +194,7 @@
             android:padding="12dp" />
 
         <Button
+            android:id="@+id/btn_next"
             android:layout_width="130dp"
             android:layout_height="55dp"
             android:layout_gravity="center"

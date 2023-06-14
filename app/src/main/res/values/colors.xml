@@ -9,4 +9,14 @@
     <color name="gray_400">#FF9CA3AF</color>
     <color name="gray_800">#FF1F2937</color>
     <color name="gray">#888888</color>
+
+    <color name="redColor">#F93A3A</color>
+    <color name="grayColor">#CBD5E1</color>
+    <color name="yellowColor">#FEDE89</color>
+    <color name="grayShapeColor">#D9D9D9</color>
+    <color name="yellowShapeColor">#FEE7AB</color>
+    <color name="greenShapeColor">#D8F3DF</color>
+
+    <color name="yellowOuterColor">#FFFAEE</color>
+    <color name="blueColor">#499DFF</color>
 </resources>

@@ -26,14 +26,27 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
                 <TextView
                     android:id="@+id/tvDiscover"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="Hello, \nBang Messi"
+                    android:text="Hello,"
                     android:textSize="25sp"
                     android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Bang Messi"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
                 <ImageView
                     android:id="@+id/img_search"

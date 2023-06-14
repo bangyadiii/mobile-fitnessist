@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Artikel"
+        android:text="Suggestion"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvUpcomingSessionss"
+        android:id="@+id/rv_sugesstionFood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

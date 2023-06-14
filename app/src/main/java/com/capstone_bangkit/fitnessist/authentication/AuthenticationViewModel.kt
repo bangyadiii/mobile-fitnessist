@@ -1,17 +1,16 @@
 package com.capstone_bangkit.fitnessist.authentication
 
 import android.app.Application
-import android.content.Intent
-import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
-import com.capstone_bangkit.fitnessist.MainActivity
 import com.capstone_bangkit.fitnessist.R
 import com.capstone_bangkit.fitnessist.api.ApiConfig
 import com.capstone_bangkit.fitnessist.api.LoginRequest
 import com.capstone_bangkit.fitnessist.api.LoginResponse
 import com.capstone_bangkit.fitnessist.api.RegisterRequest
 import com.capstone_bangkit.fitnessist.api.RegisterResponse
-import com.capstone_bangkit.fitnessist.ui.LoginActivity
+import com.capstone_bangkit.fitnessist.api.TDEECalculationRequest
+import com.capstone_bangkit.fitnessist.api.AddTDEECalculationResponse
+import com.capstone_bangkit.fitnessist.api.GetTDEECalculationResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -84,6 +83,52 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
 
             override fun onFailure(call: Call<RegisterResponse>, t: Throwable) {
                 onError(getApplication<Application>().getString(R.string.server_error))
+            }
+        })
+    }
+
+    fun addTDEECalculation(token: String, request: TDEECalculationRequest, onSuccess: (AddTDEECalculationResponse) -> Unit, onError: (String) -> Unit) {
+        // Mengirim permintaan ke backend
+        ApiConfig.getApiService().addTDEECalculation(token, request).enqueue(object :
+            Callback<AddTDEECalculationResponse> {
+            override fun onResponse(call: Call<AddTDEECalculationResponse>, response: Response<AddTDEECalculationResponse>) {
+                if (response.isSuccessful) {
+                    val tdeeResponse = response.body()
+                    if (tdeeResponse != null) {
+                        onSuccess(tdeeResponse)
+                    } else {
+                        onError("Server Error Coba lagi Setelah Beberapa Saat")
+                    }
+                } else {
+                    onError("Server Error Coba lagi Setelah Beberapa Saat")
+                }
+            }
+
+            override fun onFailure(call: Call<AddTDEECalculationResponse>, t: Throwable) {
+                onError(t.message ?: "Server Error Coba lagi Setelah Beberapa Saat")
+            }
+        })
+    }
+
+    fun getTDEECalculation(token: String, onSuccess: (GetTDEECalculationResponse) -> Unit, onError: (String) -> Unit) {
+        // Mengirim permintaan ke backend
+        ApiConfig.getApiService().getTDEECalculation(token).enqueue(object :
+            Callback<GetTDEECalculationResponse> {
+            override fun onResponse(call: Call<GetTDEECalculationResponse>, response: Response<GetTDEECalculationResponse>) {
+                if (response.isSuccessful) {
+                    val tdeeResponse = response.body()
+                    if (tdeeResponse != null) {
+                        onSuccess(tdeeResponse)
+                    } else {
+                        onError("Server Error Coba lagi Setelah Beberapa Saat")
+                    }
+                } else {
+                    onError("Server Error Coba lagi Setelah Beberapa Saat")
+                }
+            }
+
+            override fun onFailure(call: Call<GetTDEECalculationResponse>, t: Throwable) {
+                onError(t.message ?: "Server Error Coba lagi Setelah Beberapa Saat")
             }
         })
     }

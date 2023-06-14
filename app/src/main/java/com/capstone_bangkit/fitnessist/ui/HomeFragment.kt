@@ -8,11 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.capstone_bangkit.fitnessist.adapter.ArticleHomeAdapter
+import com.capstone_bangkit.fitnessist.authentication.AuthenticationManager
 import com.capstone_bangkit.fitnessist.databinding.FragmentHomeBinding
 import com.capstone_bangkit.fitnessist.model.Article
 import com.capstone_bangkit.fitnessist.model.ArticleDataDummy
 
 class HomeFragment : Fragment() {
+    private lateinit var authentication: AuthenticationManager
     private lateinit var articleAdapter: ArticleHomeAdapter
     private lateinit var binding: FragmentHomeBinding
 
@@ -20,6 +22,7 @@ class HomeFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         articleAdapter = ArticleHomeAdapter()
+        authentication = AuthenticationManager(requireContext())
     }
 
     override fun onCreateView(
@@ -34,6 +37,10 @@ class HomeFragment : Fragment() {
             val article = Intent(context, ArticleActivity::class.java)
             startActivity(article)
         }
+
+        val getName = authentication.getAccess(AuthenticationManager.NAME).toString()
+        binding.tvName.text = getName
+
         return binding.root
     }
 

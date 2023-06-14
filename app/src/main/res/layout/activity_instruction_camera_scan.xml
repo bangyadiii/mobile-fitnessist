@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="Pastikan kamera dapat dengan jelas melihat objek, posisikan makanan sesuai dengan gambar dibawah."
+        android:text="Pastikan kamera dapat dengan jelas melihat objek, posisikan makanan sesuai dengan gambar dibawah. Anda dapat memilih gambar dari gallery atau mengangkapnya."
         android:textSize="16sp"
         android:textColor="@color/black"
         android:layout_marginHorizontal="24dp"

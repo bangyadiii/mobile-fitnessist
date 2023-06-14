@@ -1,6 +1,5 @@
 package com.capstone_bangkit.fitnessist.ui
 
-import android.app.Application
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,17 +8,10 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.capstone_bangkit.fitnessist.MainActivity
 import com.capstone_bangkit.fitnessist.R
-import com.capstone_bangkit.fitnessist.api.ApiConfig
-import com.capstone_bangkit.fitnessist.api.LoginRequest
-import com.capstone_bangkit.fitnessist.api.LoginResponse
-import com.capstone_bangkit.fitnessist.api.RegisterRequest
-import com.capstone_bangkit.fitnessist.api.RegisterResponse
+import com.capstone_bangkit.fitnessist.api.TDEECalculationRequest
 import com.capstone_bangkit.fitnessist.authentication.AuthenticationManager
 import com.capstone_bangkit.fitnessist.authentication.AuthenticationViewModel
 import com.capstone_bangkit.fitnessist.databinding.ActivityLoginBinding
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var authentication: AuthenticationManager
@@ -61,10 +53,53 @@ class LoginActivity : AppCompatActivity() {
                     val login = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(login)
                     finishAffinity()
+
+                    val gender = ""
+                    val age = 0
+                    val weight = 0
+                    val height = 0
+                    val activity = ""
+                    val fat = 0.0
+                    val programId = ""
+
+                    val request = TDEECalculationRequest(
+                        gender = gender,
+                        age = age,
+                        weight = weight,
+                        height = height,
+                        activity = activity,
+                        fat = fat,
+                        program_id = programId
+                    )
+                    val getToken = authentication.getAccess(AuthenticationManager.TOKEN).toString()
+                    val tokenAccess = "Bearer $getToken"
+                    authenticationViewModel.getTDEECalculation(tokenAccess,
+                        onSuccess = { response ->
+                            if (response.data.age != 0) {
+                                login(AuthenticationManager.GENDER, response.data.gender)
+                                loginInt(AuthenticationManager.AGE, response.data.age)
+                                loginInt(AuthenticationManager.WEIGHT, response.data.weight)
+                                loginInt(AuthenticationManager.HEIGHT, response.data.height)
+                                login(AuthenticationManager.ACTIVITY, response.data.activity)
+                                loginInt(AuthenticationManager.FAT, response.data.fat)
+                                loginInt(AuthenticationManager.CALORIES_EACH_DAY, response.data.calories_each_day)
+                                loginInt(AuthenticationManager.CALORIES_EACH_DAY_TARGET, response.data.calories_each_day_target)
+                                login(AuthenticationManager.NAME, response.data.user.name)
+                                login(AuthenticationManager.USERNAME, response.data.user.username)
+                                val login = Intent(this@LoginActivity, MainActivity::class.java)
+                                startActivity(login)
+                                finishAffinity()
+                            }
+                        }, onError = { errorMessage ->
+                            val login = Intent(this@LoginActivity, ExerciseGoalsActivity::class.java)
+                            startActivity(login)
+                            finishAffinity()
+                        })
                 }
             }, onError = { errorMessage ->
                 showLoading(false)
                 Toast.makeText(this@LoginActivity, errorMessage, Toast.LENGTH_SHORT).show()
+
             })
     }
 

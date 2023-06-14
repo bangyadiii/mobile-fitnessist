@@ -10,9 +10,10 @@
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/exercise_goals_graphic1"
         android:scaleType="centerCrop"
+        android:src="@drawable/exercise_goals_graphic1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,6 +46,7 @@
             android:textSize="14sp" />
 
         <Button
+            android:id="@+id/btn_mengurangiBeratBadan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -56,6 +58,7 @@
             android:textSize="12sp" />
 
         <Button
+            android:id="@+id/btn_menambahBeratBadan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -66,6 +69,7 @@
             android:textSize="12sp" />
 
         <Button
+            android:id="@+id/btn_jagaMasaOtot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -76,6 +80,8 @@
             android:textSize="12sp" />
 
         <Button
+            android:visibility="gone"
+            android:id="@+id/btn_next"
             android:layout_width="130dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
