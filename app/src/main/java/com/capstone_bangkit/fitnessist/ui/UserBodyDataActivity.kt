@@ -16,6 +16,8 @@ class UserBodyDataActivity : AppCompatActivity() {
     private lateinit var authentication: AuthenticationManager
     private lateinit var authenticationViewModel: AuthenticationViewModel
     private lateinit var binding: ActivityUserBodyDataBinding
+    private lateinit var programId: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUserBodyDataBinding.inflate(layoutInflater)
@@ -23,6 +25,7 @@ class UserBodyDataActivity : AppCompatActivity() {
 
         authenticationViewModel = ViewModelProvider(this)[AuthenticationViewModel::class.java]
         authentication = AuthenticationManager(this)
+        programId = authentication.getAccess(AuthenticationManager.PROGRAM_ID).toString()
 
         binding.btnNext.setOnClickListener {
             if (binding.edtGender.text.isNotEmpty() && binding.edtAge.text.isNotEmpty() && binding.edtWeight.text.isNotEmpty() && binding.edtHeight.text.isNotEmpty() && binding.edtActivity.text.isNotEmpty() && binding.edtFat.text.isNotEmpty()) {
@@ -36,7 +39,7 @@ class UserBodyDataActivity : AppCompatActivity() {
                             height = binding.edtHeight.text.toString().toInt(),
                             activity = binding.edtActivity.text.toString(),
                             fat = binding.edtFat.text.toString().toDouble(),
-                            program_id = "f6c26ad5-3e7a-4dd8-9e8e-ff40cf24649f"
+                            program_id = programId
                         )
 
                     val getToken = authentication.getAccess(AuthenticationManager.TOKEN).toString()

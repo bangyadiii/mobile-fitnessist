@@ -42,14 +42,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout9"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="320dp"
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
 
-        <ImageView
-            android:id="@+id/imageView18"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/tvGivExercise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,11 +72,13 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView32"
+                android:id="@+id/tvExerciseName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="T Plank Exercise"
@@ -94,7 +96,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/textView33"
+                    android:id="@+id/tvCountDown"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="32"
@@ -104,6 +106,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <me.zhanghai.android.materialprogressbar.MaterialProgressBar
+                    android:id="@+id/pbTimer"
                     android:layout_width="118dp"
                     android:layout_height="123dp"
                     android:layout_marginTop="20sp"
@@ -112,18 +115,21 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:mpb_progressStyle="circular"
+                    app:mpb_showProgressBackground="false"
+                    app:mpb_useIntrinsicPadding="false" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btnToggleStart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25sp"
                 android:layout_marginRight="25sp"
                 android:background="@drawable/custom_shape"
-                android:text="selesai" />
+                android:text="Mulai" />
 
         </LinearLayout>
 

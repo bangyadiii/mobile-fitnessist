@@ -61,6 +61,12 @@
             android:name=".ui.LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.WorkoutDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WorkoutListActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.UploadActivity"
             android:exported="false" />
         <activity

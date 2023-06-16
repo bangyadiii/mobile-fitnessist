@@ -1,10 +1,15 @@
 package com.capstone_bangkit.fitnessist.api
 
+import com.capstone_bangkit.fitnessist.model.workouts.MyProgram
+import com.capstone_bangkit.fitnessist.model.workouts.Program
+import com.capstone_bangkit.fitnessist.model.workouts.Workout
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.Field
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiService {
@@ -46,5 +51,41 @@ interface ApiService {
         @Header("Authorization") token: String,
         @Body request: TDEECalculationRequest
     ): Call<AddTDEECalculationResponse>
+
+    @GET("programs/{id}")
+    fun getProgramByID(
+        @Path("id") programId: String
+    ): Call<ResponseJSON<Program>>
+
+    @GET("programs")
+    fun getAllPrograms(
+    ): Call<ResponseJSON<PaginationData<Program>>>
+
+    @GET("workouts")
+    fun getAllWorkoutsWithProgramId(
+        @Query("program_id") programId: String?
+    ): Call<ResponseJSON<PaginationData<Workout>>>
+
+    @GET("workouts/{id}")
+    fun getWorkoutById(
+        @Path("id") workoutId: String
+    ): Call<ResponseJSON<Workout>>
+
+    @POST("my-program")
+    fun postMyProgram(
+        @Header("Authorization") token: String,
+        @Body() request: AddMyProgramRequest
+    ): Call<ResponseJSON<MyProgram>>
+
+    @GET("my-program")
+    fun getMyProgramWithProgramId(
+        @Header("Authorization") token: String,
+        @Query("program_id") programId: String?
+    ): Call<ResponseJSON<MyProgram>>
+
+    @GET("my-program")
+    fun getMyProgram(
+        @Header("Authorization") token: String,
+    ): Call<ResponseJSON<List<MyProgram>>>
 
 }
